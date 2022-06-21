@@ -1,5 +1,13 @@
+import './App.css';
+import Layout from './components/UI/Layout';
+import Home from './pages/Home';
+
 function App() {
-  return <div>React Quiz App</div>;
+  return (
+    <Layout>
+      <Home />
+    </Layout>
+  );
 }
 
 export default App;
