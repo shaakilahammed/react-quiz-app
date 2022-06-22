@@ -9,7 +9,7 @@ export const Login = () => {
   return (
     <>
       <h1>Login to your account</h1>
-      <div class="column">
+      <div className="column">
         <Illustration image={loginImage} alt="Login Image" />
         <Form className="login" action="">
           <TextInput
@@ -19,8 +19,10 @@ export const Login = () => {
           />
           <TextInput type="password" placeholder="Enter password" icon="lock" />
 
-          <Button>Submit now</Button>
-          <div class="info">
+          <Button>
+            <span>Submit Now</span>
+          </Button>
+          <div className="info">
             Don't have an account? <a href="signup.html">Signup</a> instead.
           </div>
         </Form>

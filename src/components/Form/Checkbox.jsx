@@ -1,6 +1,6 @@
-const Checkbox = ({ text, ...rest }) => {
+const Checkbox = ({ text, className, ...rest }) => {
   return (
-    <label>
+    <label className={className}>
       <input type="checkbox" {...rest} /> <span>{text}</span>
     </label>
   );
