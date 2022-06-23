@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from '../components/Form/Button';
 import Form from '../components/Form/Form';
 import TextInput from '../components/Form/TextInput';
@@ -5,7 +6,7 @@ import Illustration from '../components/UI/Illustration';
 
 import loginImage from '../assets/images/login.svg';
 
-export const Login = () => {
+const Login = () => {
   return (
     <>
       <h1>Login to your account</h1>
@@ -23,10 +24,12 @@ export const Login = () => {
             <span>Submit Now</span>
           </Button>
           <div className="info">
-            Don't have an account? <a href="signup.html">Signup</a> instead.
+            Don't have an account? <Link to="/sign-up">Signup</Link> instead.
           </div>
         </Form>
       </div>
     </>
   );
 };
+
+export default Login;

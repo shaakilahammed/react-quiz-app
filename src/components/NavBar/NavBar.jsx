@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo-bg.png';
 import Account from './Account';
 import classes from './NavBar.module.css';
@@ -7,10 +8,10 @@ const NavBar = () => {
     <nav className={classes.nav}>
       <ul>
         <li>
-          <a href="index.html" className={classes.brand}>
+          <Link to="/" className={classes.brand}>
             <img src={logo} alt="Quiz App Logo" />
             <h3>Quiz App</h3>
-          </a>
+          </Link>
         </li>
       </ul>
       <Account />
