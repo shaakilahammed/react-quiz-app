@@ -1,6 +1,8 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Layout from './components/UI/Layout';
+import PrivateRoute from './components/UI/PrivateRoute';
+import PublicRoute from './components/UI/PublicRoute';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Quiz from './pages/Quiz';
@@ -12,9 +14,30 @@ function App() {
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/sign-up" element={<Signup />} />
-        <Route path="/quiz" element={<Quiz />} />
+        <Route
+          path="/login"
+          element={
+            <PublicRoute>
+              <Login />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/sign-up"
+          element={
+            <PublicRoute>
+              <Signup />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/quiz"
+          element={
+            <PrivateRoute>
+              <Quiz />
+            </PrivateRoute>
+          }
+        />
         <Route path="/result" element={<Result />} />
         <Route path="/*" element={<Navigate to="/" />} />
       </Routes>
