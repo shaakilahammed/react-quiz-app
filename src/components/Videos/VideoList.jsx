@@ -13,6 +13,7 @@ const VideoList = () => {
           className={classes.videos}
           dataLength={videos.length}
           hasMore={hasMore}
+          loader="Loading...."
           next={() => {
             setPage(page + 12);
           }}

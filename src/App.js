@@ -31,14 +31,14 @@ function App() {
           }
         />
         <Route
-          path="/quiz"
+          path="/quiz/:id"
           element={
             <PrivateRoute>
               <Quiz />
             </PrivateRoute>
           }
         />
-        <Route path="/result" element={<Result />} />
+        <Route path="/result/:id" element={<Result />} />
         <Route path="/*" element={<Navigate to="/" />} />
       </Routes>
     </Layout>
